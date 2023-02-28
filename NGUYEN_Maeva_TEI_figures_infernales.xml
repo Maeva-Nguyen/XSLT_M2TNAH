@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Figures Infernales</title>
+            <author ref="https://catalogue.bnf.fr/ark:/12148/cb12044266q">
+               <forename>Ryûnosuke</forename>
+               <surname>Akutagawa</surname>
+            </author>
+            <respStmt>
+               <resp>Encodage dans le cadre des cours de XML-TEI du master "Technologies Numériques
+                  Appliquées à l'Histoire" à l'École Nationale des Chartes. </resp>
+               <persName>
+                  <surname>Nguyen</surname>
+                  <forename>Maëva</forename>
+               </persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+
+            <publisher>Gallimard</publisher>
+            <date when-iso="2003">2003</date>
+            <availability>
+               <licence> © Éditions Gallimard, 2003, pour la préface. © Unesco, 1965, pour la
+                  traduction française. </licence>
+            </availability>
+         </publicationStmt>
+
+
+         <sourceDesc>
+            <biblFull>
+               <titleStmt>
+                  <title type="main">Rashômon et autres contes</title>
+                  <title type="subtitle">Figures infernales</title>
+                  <author ref="https://catalogue.bnf.fr/ark:/12148/cb12044266q">
+                     <forename>Ryûnosuke</forename>
+                     <surname>Akutagawa</surname>
+                  </author>
+               </titleStmt>
+
+               <publicationStmt>
+                  <publisher>Gallimard</publisher>
+                  <pubPlace>
+                     <address>
+                        <country key="FR"/>
+                        <settlement type="city">Paris</settlement>
+                        <postCode>75328</postCode>
+                        <district type="arrondissement">7e</district>
+                        <street> rue Gaston-Gallimard, <num>5</num>
+                        </street>
+                     </address>
+                  </pubPlace>
+                  <date when-iso="2003-10-09">09 octobre 2003</date>
+               </publicationStmt>
+            </biblFull>
+         </sourceDesc>
+      </fileDesc>
+
+      <profileDesc>
+
+         <creation>
+            <date when-iso="1918-04">Avril 1918</date>
+            <country key="JA">Japon</country>
+         </creation>
+
+         <particDesc>
+            <listPerson>
+
+               <person xml:id="Horikawa" role="lord" sex="male">
+                  <persName>
+                     <roleName type="nobility">Seigneur</roleName>
+                     <nameLink>de</nameLink>
+                     <surname>Horikawa</surname>
+                  </persName>
+               </person>
+
+               <person xml:id="Yoshihidé" role="painter" sex="male">
+                  <persName>
+                     <surname>Yoshihidé</surname>
+                     <addName>Saruhidé</addName>
+                     <addName>Chira Eiju</addName>
+                  </persName>
+               </person>
+
+               <person xml:id="FilleDeYoshihidé" role="maid" sex="female">
+                  <persName>
+                     <roleName>la fille</roleName>
+                     <nameLink>de</nameLink>
+                     <surname>Yoshihidé</surname>
+                  </persName>
+               </person>
+
+               <person xml:id="singe" role="pet" sex="male">
+                  <persName>
+                     <roleName>singe</roleName>
+                     <forename>Yoshihidé</forename>
+                  </persName>
+               </person>
+
+               <person xml:id="prince" role="prince" sex="male">
+                  <persName>
+                     <roleName>le prince</roleName>
+                  </persName>
+               </person>
+
+               <person xml:id="princesse" role="princess" sex="female">
+                  <persName>
+                     <roleName>la princesse</roleName>
+                  </persName>
+               </person>
+
+               <person xml:id="Yokawa" role="priest" sex="male">
+                  <persName>
+                     <roleName>Le grand prêtre</roleName>
+                     <nameLink>de</nameLink>
+                     <surname>Yokawa</surname>
+                  </persName>
+               </person>
+               <listRelation>
+
+                  <relation type="hierarchy" name="lord" active="#Horikawa"
+                     passive="#Yoshihidé #FilleDeYoshihidé"/>
+                  <relation type="family" name="father" active="#Yoshihidé"
+                     passive="#FilleDeYoshihidé"/>
+                  <relation type="family" name="father" active="#Horikawa"
+                     passive="#prince #princesse"/>
+                  <relation type="possession" name="owner" active="#Horikawa" passive="#singe"/>
+                  <relation type="friendship" name="friends" mutual="#FilleDeYoshihidé #singe"/>
+                  <relation type="work" name="employer" active="#Horikawa"
+                     passive="#FilleDeYoshihidé"/>
+                  <relation type="enmity" name="ennemy" mutual="#Yokawa #Yoshihidé"/>
+
+               </listRelation>
+
+            </listPerson>
+
+         </particDesc>
+
+
+         <settingDesc>
+
+            <listPlace>
+               <place type="building">
+                  <placeName xml:id="résidenceHorikawa">
+                     <name>la résidence des Horikawa</name>
+                     <address>
+                        <country key="JA"/>
+                        <settlement>none</settlement>
+                        <postCode>none</postCode>
+                        <district>none</district>
+                        <street>none</street>
+                        <location>
+                           <geo>none</geo>
+                        </location>
+                     </address>
+                  </placeName>
+               </place>
+
+               <place type="building">
+                  <placeName>
+                     <name>le Grand Palais de Nijô</name>
+                     <address>
+                        <country key="JA"/>
+                        <settlement type="city">Kyoto</settlement>
+                        <postCode>604-8301</postCode>
+                        <district>none</district>
+                        <street> Nijojocho, Nakagyo Ward, <num>541</num>
+                        </street>
+                        <location>
+                           <geo>35° 00′ 51″ nord, 135° 44′ 51″ est</geo>
+                        </location>
+                     </address>
+                  </placeName>
+               </place>
+
+               <place type="building">
+                  <placeName>
+                     <name>le Palais de Kawara</name>
+                     <address>
+                        <country key="JA"/>
+                        <settlement type="city">Higashi-Sanjô</settlement>
+                        <postCode>none</postCode>
+                        <district>none</district>
+                        <street>none</street>
+                        <location>
+                           <geo>none</geo>
+                        </location>
+                     </address>
+                  </placeName>
+               </place>
+
+               <place type="city">
+                  <placeName>
+                     <name>Higashi-Sanjô</name>
+                     <address>
+                        <country key="JA"/>
+                        <settlement type="city">Higashi-Sanjô</settlement>
+                        <postCode>955-0047</postCode>
+                        <district>none</district>
+                        <street>none</street>
+                        <location>
+                           <geo>37° 37′ 42″ nord, 138° 58′ 25″ est</geo>
+                        </location>
+                     </address>
+                  </placeName>
+               </place>
+
+               <place type="city">
+                  <placeName>
+                     <name>Shiogama</name>
+                     <address>
+                        <country key="JA"/>
+                        <settlement type="city">Shiogama</settlement>
+                        <postCode>none</postCode>
+                        <district>none</district>
+                        <street>none</street>
+                        <location>
+                           <geo>38° 18′ 52″ nord, 141° 01′ 20″ est</geo>
+                        </location>
+                     </address>
+                  </placeName>
+               </place>
+
+               <place type="region">
+                  <placeName>
+                     <name>la province de Michinoku</name>
+                     <address>
+                        <country key="JA"/>
+                        <settlement>none</settlement>
+                        <postCode>none</postCode>
+                        <district>none</district>
+                        <street>none</street>
+                        <location>
+                           <geo>none</geo>
+                        </location>
+                     </address>
+                     <note>Cette province n'existe plus.</note>
+                  </placeName>
+               </place>
+
+               <place type="region">
+                  <placeName>
+                     <name>la province de Tamba</name>
+                     <address>
+                        <country key="JA"/>
+                        <settlement>none</settlement>
+                        <postCode>none</postCode>
+                        <district>none</district>
+                        <street>none</street>
+                        <location>
+                           <geo>35° 13′ 42″ N, 135° 20′ 58″ E</geo>
+                        </location>
+                     </address>
+                     <note>Cette province n'existe plus.</note>
+                  </placeName>
+               </place>
+
+               <place type="city">
+                  <placeName>
+                     <name>Higaki</name>
+                     <address>
+                        <country key="JA"/>
+                        <settlement type="city">Higaki</settlement>
+                        <postCode>none</postCode>
+                        <district>none</district>
+                        <street>none</street>
+                        <location>
+                           <geo>none</geo>
+                        </location>
+                     </address>
+                  </placeName>
+               </place>
+
+               <place type="building">
+                  <placeName>
+                     <name>temple Ryûgaiji</name>
+                     <address>
+                        <country key="JA"/>
+                        <settlement type="city">Ryûgaiji</settlement>
+                        <postCode>none</postCode>
+                        <district>none</district>
+                        <street>none</street>
+                        <location>
+                           <geo>none</geo>
+                        </location>
+                     </address>
+                  </placeName>
+               </place>
+
+               <place type="country">
+                  <placeName>
+                     <name>Chine</name>
+                     <address>
+                        <country key="CN"/>
+                        <settlement>none</settlement>
+                        <postCode>none</postCode>
+                        <district>none</district>
+                        <street>none</street>
+                        <location>
+                           <geo>35° 51' 41.976" N 104° 11' 43.429" E</geo>
+                        </location>
+                     </address>
+                  </placeName>
+               </place>
+            </listPlace>
+         </settingDesc>
+      </profileDesc>
+
+      <encodingDesc>
+         <p> Cet encodage a été effectué à partir du texte de l'édition de Rashômon et autres
+            contes, écrit par Akutagawa Ryûnosuke et publié par les éditions Gallimard dans la
+            collection "Folio 2€". L'extrait a été retranscrit à partir de cette édition, sans
+            modifications textuelles. Toutefois, la mise en page n'a pas été conservée (débuts/fins
+            de ligne, changements de pages etc.) car elle n'était pas nécessaire au projet
+            d'encodage qui se focalise sur les aspects sémantiques de la nouvelle et non pas son
+            aspect visuel. L'organisation de la nouvelle en chapitres et paragraphes, a été
+            conservée car elle ne relève pas de l'aspect matériel de l'objet-livre mais bien de la
+            structure. </p>
+      </encodingDesc>
+   </teiHeader>
+
+
+
+   <text>
+      <body>
+         <div1 type="book">
+            <div2 type="chapter" n="1">
+               <head>I</head>
+
+               <p>Ni dans le passé, ni même dans les temps à venir, on ne pourrait imaginer un homme
+                  semblable au <persName ref="#Horikawa"> Seigneur de Horikawa</persName>. J'ai
+                  entendu dire que, juste avant sa naissance, le Roi de Science magique Dai Itoku
+                  était apparu en personne au chevet de sa mère. De toute façon, dès le premier jour
+                  de sa vie, il donna l’impression de n’être pas comme les autres. Il n’y avait
+                  rien, dans tout ce qu’il faisait, qui ne défiât l’imagination. Représentez-vous,
+                  par exemple,<placeName ref="#résidenceHorikawa"> la Résidence des Horikawa
+                  </placeName>, ses proportions gigantesques et sa disposition incomparable !
+                  Comment la qualifier ? Grandiose ? Superbe ? Il y avait en elle quelque chose qui
+                  transcendait toutes nos banalités. Dès lors, des gens discoureurs mettaient en
+                  parallèle les actes et faits de notre <persName ref="#Horikawa"> Seigneur
+                  </persName> avec ceux du <persName>
+                     <roleName type="nobility">Premier Empereur</roleName>
+                     <nameLink>de</nameLink>
+                     <surname>Ts’in </surname>
+                  </persName> ou de l'<persName>
+                     <roleName type="nobility">Empereur</roleName>
+                     <surname>Yang</surname>
+                  </persName>. Mais ces gens-là n’étaient-ils pas comme ces aveugles du proverbe
+                  qui, palpant un éléphant chacun à sa manière, portaient sur lui des jugements
+                  contradictoires ? Car, contrairement à ce qu’il en est pour ces empereurs, on ne
+                  pouvait dire que notre <persName ref="#Horikawa">Seigneur</persName> eût recherché
+                  la gloire et le luxe pour lui-même, car il témoignait avec une immense magnanimité
+                  envers le peuple avec lequel il voulait partager la joie de vivre.</p>
+
+               <p>Et ce qui le prouve, c’est que, grâce à sa vertu, il avait pu traverser sans
+                  dommage <placeName>le Grand Palais de Nijô</placeName> infesté de génies
+                  malfaisants. C’est également pour cette raison, je vous l’affirme, que s’est
+                  dissipée, à la seule admonestation du <persName ref="#Horikawa">Seigneur
+                  </persName>, l’ombre même du <persName>
+                     <roleName type="office">Ministre</roleName>
+                     <nameLink>de gauche</nameLink>
+                     <surname>Tooru</surname>
+                  </persName> qui, à ce que l’on dit, avait fait son habituelle apparition nocturne
+                  dans <placeName>le Palais de Kawara</placeName> à
+                     <placeName>Higashi-Sanjô</placeName>, célèbre pour son tableau du paysage de
+                     <placeName>Shiogama</placeName>, dans <placeName>la province de
+                     Michinoku</placeName>. Il est donc bien naturel, si éclatant que fut son
+                  prestige, que tous les habitants de la capitale, vieux et jeunes, hommes et
+                  femmes, aient vénéré le <persName ref="#Horikawa"> Seigneur </persName> comme une
+                  réincarnation du Bouddha. </p>
+
+
+               <p>Je ne me souviens plus en quelle année, alors qu’il revenait du banquet des
+                  « Fleurs de Prunier » organisé à la Cour, un bœuf de son char, dételé par mégarde,
+                  blessa un vieillard qui passait par hasard. Même en cette circonstance, celui-ci,
+                  joignant les mains en signe de prière, s’était félicité, à ce qu’il disait, de son
+                  bonheur d’avoir été touché par le sabot du bœuf du <persName ref="#Horikawa">
+                     Seigneur</persName>.</p>
+
+
+               <p>Ainsi, sa vie abonde en anecdotes qui mériteraient d’être transmises à la
+                  postérité. Comme présent à l’occasion d’un banquet impérial, l’Empereur lui avait
+                  fait don de trente chevaux, tous blancs… Il avait placé ses pages qu’il choyait,
+                  sous <placeName>le pont de Nagara</placeName>, en poteaux de soutien… Il avait
+                  fait opérer l’ulcère de sa cuisse par un moine chinois qui passait pour avoir
+                  importé un art thérapeutique magique… L’énumération en serait inépuisable. Mais de
+                  ces nombreux épisodes, nul n’est plus terrifiant que l’histoire du <objectName
+                     ref="#FiguresInfernales">Paravent des Figures infernales</objectName> conservé
+                  aujourd’hui encore dans sa maison au titre de trésor de famille. Lors de ce
+                  dernier événement, le <persName ref="#Horikawa"> Seigneur </persName> lui-même, en
+                  dépit de sa fermeté habituelle, paraissait avoir été pris de court. À plus forte
+                  raison, nous autres, à ses côtés, étions, il va sans dire, plus morts que vifs.
+                  Moi, entre tous, qui le servais depuis vingt ans, je n’avais jamais vu spectacle
+                  plus horrible. </p>
+
+
+               <p>Mais, pour faire ce récit, il me faut dire d’abord qui était <persName
+                     ref="#Yoshihidé">Yoshihidé</persName>, peintre du <objectName
+                     ref="#FiguresInfernales">Paravent</objectName> en question. </p>
+            </div2>
+
+
+            <div2 type="chapter" n="2">
+               <head>II</head>
+
+               <p>
+                  <persName ref="#Yoshihidé"> Yoshihidé</persName> ! Peut-être même de nos jours, ce
+                  nom rappelle-t-il quelque chose à certains. C’était un peintre bien connu avec
+                  lequel, disait-on, nul contemporain n’aurait pu rivaliser pour la maîtrise des
+                  couleurs et du dessin. Lors de l’événement que je vais vous raconter, peut-être
+                  avait-il déjà dépassé la cinquantaine. Il avait l’aspect d’un vieillard, petit,
+                  maigre, n’ayant que la peau sur les os, et l’air méchant. Quand il se rendait à
+                     <placeName ref="#résidenceHorikawa">la résidence du Seigneur</placeName>, il
+                  était toujours habillé d’un vêtement de chasse orange foncé, et coiffé d’un
+                     <foreign xml:lang="JA">eboshi</foreign> souple. Sa personne donnait une
+                  impression de vulgarité extrême. On ne savait pourquoi, ce vieillard ne paraissait
+                  pas son âge. De plus, la couleur tout rouge de ses lèvres faisait soupçonner chez
+                  lui quelque chose de bestial, de répugnant. Certains en attribuaient la cause du
+                  pinceau qu’il ne cessait de sucer. Mais je ne sais qu’en penser. Des gens plus
+                  malveillants encore le surnommaient <persName ref="#Yoshihidé">
+                     <addName>Saruhidé</addName>
+                  </persName> (Hidé-singe), disant que ses gestes rappelaient ceux des singes.</p>
+
+
+               <p>À propos de ce sobriquet, voici l’histoire qu’on racontait. Vers cette époque,
+                     <persName ref="#FilleDeYoshihidé"> la fille unique de Yoshihidé</persName>,
+                  âgée de quinze ans, était en service dans <placeName ref="#résidenceHorikawa">la
+                     maison du Seigneur</placeName> en qualité de demoiselle d’honneur. Peu
+                  semblable à son père, elle était charmante. Peut-être parce qu’elle avait perdu sa
+                  mère à un âge encore tendre, elle avait une âme sensible ; elle était d’une
+                  intelligence supérieure à son âge et comme, malgré sa jeunesse, elle comprenait
+                  bien ce qu’on attendait d’elle, la Dame et les autres dames d’honneur la
+                  favorisaient et ne tardèrent pas à l’aimer. </p>
+
+
+               <p>Or, quelqu’un de <placeName>la province de Tamba</placeName> avait un jour offert
+                  au <persName ref="#Horikawa">Seigneur</persName> un singe bien dressé auquel
+                     <persName ref="#prince"> le jeune prince </persName>, encore enfant et
+                  espiègle, avait donné le nom de <persName ref="#singe">Yoshihidé</persName>. À la
+                  vue de ce singe d’aspect déjà assez comique et ainsi nommé, nul dans la maison ne
+                  pouvait s’empêcher de sourire. On ne se contentait pas de rire ; à toute occasion,
+                  on s’amusait à le poursuivre, disant : <said direct="true">« Le voilà sur le pin
+                     du jardin ! »</said> ou bien : <said direct="true">« Il a encore souillé les
+                     nattes de la chambre de service »</said>, et, l’appelant à chaque fois <said
+                     direct="true" toWhom="#singe">«  <persName ref="#singe"> Yoshihidé
+                     </persName> ! <persName ref="#singe"> Yoshihidé </persName> ! »</said> on le
+                  persécutait.</p>
+
+
+               <p>Un jour, <persName ref="#FilleDeYoshihidé"> la fille de Yoshihidé </persName> dont
+                  je viens de parler passait dans le long couloir ; elle portait à la main un rameau
+                  de prunier d’hiver auquel une lettre était attachée. Elle aperçut le petit singe
+                     <persName ref="#singe"> Yoshihidé </persName> qui, blessé à la patte, n’avait
+                  plus la force de grimper en hâte le pilier comme il le faisait d’ordinaire, et
+                  qui, boitillant, s’élança vers elle depuis la porte du fond. Derrière lui,
+                     <persName ref="#prince"> le jeune prince </persName>, brandissant une branche,
+                  le poursuivait en criant : <said direct="true" who="#prince" toWhom="#singe"
+                     >« Voleur de cédrats ! Attends un peu ! Attends ! »</said>
+                  <persName ref="#FilleDeYoshihidé"> La fille de Yoshihidé</persName>, à ce
+                  spectacle, hésita, un instant à peine ; le singe s’accrochait au pan de sa jupe et
+                  l’implorait avec des cris plaintifs. Elle ne put s’empêcher d’être prise de
+                  compassion. De sa main restée libre, l’autre tenant toujours le rameau de prunier,
+                  elle ouvrir sa manche vaporeusement violette, prit doucement le singe sur son bras
+                  et s’inclina respectueusement devant <persName ref="#prince"> le jeune prince
+                  </persName> auquel elle dit d’une voix calme : <said direct="true"
+                     who="#FilleDeYoshihidé" toWhom="#prince">« Veuillez me permettre d’intercéder
+                     en faveur de ce singe. Ce n’est qu’une bête ! Veuillez lui pardonner ! »</said>
+               </p>
+
+
+               <p>Mais <persName ref="#prince"> le jeune prince </persName>, freinant difficilement
+                  sa course rapide, ébaucha une grimace, et frappa deux ou trois fois le plancher de
+                  ses pieds. </p>
+
+
+               <p>
+                  <said direct="true" who="#prince" toWhom="#FilleDeYoshihidé">- Pourquoi le
+                     protèges-tu ? Ce singe a volé des cédrats ! </said> Répondit-il.</p>
+
+
+               <p>
+                  <said direct="true" who="#FilleDeYoshihidé" toWhom="#prince">- Mais ce n’est qu’un
+                     bête !… </said> s’exclama-t-elle de nouveau.</p>
+
+
+               <p>La jeune fille renouvela sa supplication et, esquissant tristement un sourire, osa
+                  dire :</p>
+
+
+               <p>
+                  <said direct="true" who="#FilleDeYoshihidé" toWhom="#prince">- Ce singe s’appelle
+                        <persName ref="#singe">Yoshihidé</persName>. Dès lors, je ne puis m’empêcher
+                     de demander sa grâce, car j’ai l’impression que c’est mon père lui-même qui est
+                     fustigé.</said>
+               </p>
+
+
+               <p>
+                  <persName ref="#prince"> Le jeune prince </persName>, malgré son irritation, ne
+                  pouvait insister davantage.</p>
+
+
+               <p>
+                  <said direct="true" who="#prince" toWhom="#FilleDeYoshihidé">- Bon ! S’il s’agit
+                     de ton père, je suis obligé de céder.</said>
+               </p>
+
+
+               <p>Sur ces paroles prononcées comme malgré lui, jetant la branche qu’il avait à la
+                  main, il se retira vers la porte par laquelle il était entré.</p>
+
+
+            </div2>
+
+
+            <div2 type="chapter" n="3">
+               <head>III</head>
+
+               <p>Après cet incident, <persName ref="#FilleDeYoshihidé"> la fille de Yoshihidé
+                  </persName> et ce petit singe devinrent de bons amis. Elle accrocha au cou de
+                  l’animal un petit grelot d’or suspendu à un très beau ruban que <persName
+                     ref="#princesse"> la jeune princesse </persName> lui avait donné. Le singe de
+                  son côté, quittait rarement la jeune fille. Lorsqu’il arrivait que, légèrement
+                  enrhumée, elle garda le lit, son petit compagnon, le visage attristé, semblait-il,
+                  assis à demeure au chevet de la malade, s’occupait à ronger ses ongles. </p>
+
+
+               <p>Mais les choses prenaient d’ores et déjà une tournure curieuse : personne ne
+                  persécutait plus le petit singe. Au contraire, tout le monde se mit à le choyer.
+                  Enfin, <persName ref="#prince"> le jeune prince </persName> lui-même alla jusqu’à
+                  jeter des fruits de plaqueminier ou des châtaignes. Ce n’est pas tout. Un coup de
+                  pied donné au singe par un officier mit <persName ref="#prince"> le jeune prince
+                  </persName> en fureur, à ce qu’on raconte. Peu après, <persName ref="#Horikawa">
+                     le Seigneur </persName> ordonna expréssément à la jeune fille de se présenter
+                  devant lui avec son protégé. Et cela, parce qu’il avait entendu parle de la colère
+                  du <persName ref="#prince"> jeune prince </persName>. <persName ref="#Horikawa">
+                     Le Seigneur </persName> aurait, bien entendu, pris connaissance de la raison
+                  pour laquelle la jeune fille choyait le singe. </p>
+
+
+               <p>
+                  <said direct="true" who="#Horikawa" toWhom="#FilleDeYoshihidé">- Ta piété envers
+                     ton père me touche ! Je l’apprécie ! </said> lui dit <persName ref="#Horikawa">
+                     le Seigneur</persName>.</p>
+
+
+               <p>Selon sa volonté particulière, une robe de couleur pourpre fut donnée à la jeune
+                  fille en récompense. Comme pour surenchérir, le petit singe, à l’amusement
+                  général, imitant les gestes humains, reçut respectueusement le présent de ses deux
+                  mains ; ce qui, dit-on, porta la bonne humeur du <persName ref="#Horikawa">
+                     Seigneur </persName> à son comble. Ainsi, vous pouvez voir que la faveur dont
+                     <persName ref="#Horikawa"> le Seigneur </persName> entourait <persName
+                     ref="#FilleDeYoshihidé"> la fille de Yoshihidé </persName> était uniquement due
+                  à son admiration pour la bonne conduite de cette dernière, et non, comme le
+                  prétendaient les rumeurs, à son goût pour les belles femmes. Il faut tout de même
+                  reconnaître qu’il y avait eu quelque raison plausible pour faire naître ces
+                  rumeurs. Mais je vous en parlerai en son lieu et plus à loisir. Qu’il suffise ici
+                  de vous dire que <persName ref="#Horikawa"> le Seigneur </persName> n’était pas de
+                  cette espèce de gens qui s’amusent à s’amouracher d’une fille de basse condition
+                  comme celle d’un simple peintre, si belle fût-elle. </p>
+
+
+               <p>
+                  <persName ref="#FilleDeYoshihidé"> La fille de Yoshihidé </persName> s’était
+                  retirée de l’audience, comblée d’honneurs. En femme intelligente, elle s’était
+                  conduite de telle manière qu’elle pût conjurer toute jalousie de la part des dames
+                  d’honneur les plus mesquines. Ces dernières saisissaient toutes les occasions de
+                  choyer la jeune fille et le singe. On voyait bien que la jeune fille ne se
+                  trouvait jamais éloignée de <persName ref="#princesse"> la jeune princesse
+                  </persName> : dans le cortège de chars sortant pour une promenade, elle était
+                  toujours de la suite. </p>
+               <p>Mais délaissons la fille pour le moment et parlons de son père. Il est vrai, comme
+                  je vous l’ai dit, que le singe était bientôt parvenu à obtenir les faveurs de
+                  tous, mais <persName ref="#Yoshihidé"> Yoshihidé </persName> lui-même, qui lui
+                  avait donné son nom, restait un objet d’abomination générale ; on continuait à
+                  l’appeler en cachette «  <persName ref="#Yoshihidé"> Saruhidé </persName> ». </p>
+               <p>Et cela, pas seulement dans <placeName ref="#résidenceHorikawa">la demeure du
+                     Seigneur</placeName>. <persName ref="#Yokawa"> Le grand prêtre de
+                     Yokawa</persName>, par exemple, au nom seul de <persName ref="#Yoshihidé"
+                     >Yoshihidé</persName>, pâlissait, comme s’il eût rencontré un démon, tant il le
+                  détestait. (On racontait en effet que cette attitude était due aux caricatures par
+                     lesquelles<persName ref="#Yoshihidé"> Yoshihidé</persName> avait stigmatisé la
+                  conduite peu glorieuse du <persName ref="#Yokawa">grand prêtre</persName>. Mais
+                  doit-on prendre au sérieux ces rumeurs propagées par des gens du peuple ?) De
+                  toute façon, la mauvaise réputation de <persName ref="#Yoshihidé"> Yoshihidé
+                  </persName> demeurait. Il se trouvait certes des gens qui ne disaient pas de même,
+                  mais ce n’étaient que deux ou trois de ses confrères en peinture ou ceux qui, en
+                  l’ignorance de l’homme, ne connaissaient que les œuvres. La réalité est que, outre
+                  son aspect vulgaire, ses vices invétérés dégoûtaient tout le monde. On ne récole
+                  que ce que l’on a semé. C’est tout ce que j’en puis dire. </p>
+
+
+            </div2>
+
+            <div2 type="chapter" n="4">
+               <head>IV</head>
+
+               <p>Il était avare, rapace, impudent, paresseux, insatiable et, par-dessus tout,
+                  insolent et orgueilleux. Toujours « moi, le premier peintre de ce temps » affiché
+                  au bout de son nez ! On aurait pu tolérer ces penchants s’il les avait limités à
+                  son métier. Mais son aversion de toute contrainte était telle qu’il bafouait tout
+                  ce qu’on peut tenir pour us et coutumes de la société. Selon un disciple de longue
+                  date de <persName ref="#Yoshihidé">Yoshihidé</persName>, un jour, dans la
+                  résidence d’une haute personnalité, il était arrivé que la nécromancienne célèbre
+                  de <placeName>Higaki</placeName>, visitée par les esprits, avait prononcé une
+                  sentence horrible. Pendant ce temps, cet homme, à ce que l’on m’a rapporté,
+                  insouciant de ce qu’elle disait, dessinait minutieusement, avec un pinceau et de
+                  l’encre qui se trouvaient à portée de sa main, le visage terrifiant de la
+                  sorcière. Peut-être la malédiction des mânes n’avait-elle pas plus de poids à ses
+                  yeux qu’un jeu d’enfant ! Suivant de telles dispositions, il se livrait à toutes
+                  sortes d’audaces sacrilèges : pour représenter Kichijôten, il dessina le portrait
+                  abjecte d’une prostituée ! Quand il voulut peindre le Roi de Science magique Fudô,
+                  ne prit-il pas pour modèle un vil policier ? Aux reproches qu’on lui faisait, il
+                  s’esclaffait :</p>
+
+               <p><said direct="true" who="#Yokawa">- Comme c’est étrange ! Pensez-vous que les
+                     divinités dessinées par <persName ref="#Yoshihidé"> Yoshihidé </persName> vont
+                     le frapper de leurs foudres ?</said></p>
+
+               <p>Ses disciples eux-mêmes en restaient abasourdis. Un grand nombre d’entre eux,
+                  craignant, à mon idée, une malédiction possible, se hâtèrent de prendre congé de
+                  lui. En un mot, sa démesure était sans limites : il croyait qu’il n’y avait pas
+                  plus grand homme que lui sous le ciel à l’époque.</p>
+
+
+               <p>Il est donc inutile de dire combien il prenait de haut le cercle des peintres. Ses
+                  peintures étaient d’ailleurs si excentriques, tant par leur dessin que par leurs
+                  couleurs, que ses collègues qui ne s’accordaient pas avec lui, le tenaient pour un
+                  escroc. À les croire, il avait toujours circulé au sujet des peintres des grands
+                  maîtres anciens tels que <persName><surname>Kawanari</surname></persName>, <persName>
+                     <surname>Kanaoka</surname>
+                  </persName> ou autres, quelque légende gracieuse : on disait que les fleurs de
+                  prunier d’une porte de bois exhalaient de doux parfums au clair de lune, ou même
+                  que l’on entendait les courtisans peints sur tel paravent jouer de la flûte… ; les
+                  peintures de <persName ref="#Yoshihidé"> Yoshihidé</persName>, en revanche, ne
+                  soulevaient que des rumeurs lugubres et étranges. Je prendrai l’une de ses
+                  peintures comme exemple : celle du <objectName> Cycle des Naissances et des
+                     Morts</objectName>, suspendue sous le portail du <placeName>temple
+                     Ryûgaiji</placeName>. On contait que lorsqu’on passait sous le portail, la
+                  nuit, très tard, on entendait les soupirs et les sanglots des habitants du Ciel.
+                  Certains prétendaient même avoir flairé les puanteurs qui se dégageaient des
+                  cadavres en décomposition. Et encore, à propos des portraits des dames d’honneur
+                  qu’il avait peints sur l’ordre du Seigneur, ne disait-on pas que toutes les dames
+                  qui avaient servi de modèle étaient mortes avant que trois ans se fussent écoulés,
+                  frappées d’une maladie étrange et comme vidées de leur âme ? Les mauvaises langues
+                  tenaient toutes ces rumeurs pour autant de témoignages irrécusables de la
+                  perversité des œuvres de <persName ref="#Yoshihidé"> Yoshihidé</persName>. </p>
+
+
+               <p>Mais c’était un homme qui, tel que nous le connaissions déjà, aimait à provoquer
+                  des esclandres ; aussi tirait-il plutôt orgueil de toutes ces critiques. Un jour,
+                     <persName ref="#Horikawa"> le Seigneur </persName> plaisanta :</p>
+
+               <p><said direct="true" who="#Horikawa" toWhom="#Yoshihidé">- On dirait que tu n’aimes
+                     que trop ce qui est laid.</said></p>
+
+               <p>Il répondit insolemment, avec un sourire sinistre de ses lèvres si rouges malgré
+                  son âge :</p>
+
+               <p><said direct="true" who="#Yoshihidé" toWhom="#Horikawa">- Votre Seigneurie a
+                     raison. Décidément, la beauté de la laideur échappe aux peintres qui ne savent
+                     que barbouiller.</said></p>
+
+
+               <p>Si l’on va même jusqu’à admettre qu’il était le plus grand des peintres, quelle
+                  audace n’avait-il pas cependant de juger avec tant de hauteur en face du <persName
+                     ref="#Horikawa"> Seigneur</persName> ! Le disciple mentionné plus haut,
+                  critiquant son outrecuidance, le surnomma en secret <!-- Lorsqu'il est question du surnom donné à Yoshihidé, j'ai utilisé la balise <persName>
+                  mais dans la deuxième occurrence, il s'agit du monstre et non de Yoshihidé. -->
+                  <persName ref="#Yoshihidé"> Chira Eiju</persName>. Je le comprends. Chira Eiju
+                  est, vous savez bien, le nom d’un monstre ailé à long nez, venu autrefois de
+                     <placeName>Chine</placeName>… </p>
+
+               <p>Toutefois, même à lui, même à ce <persName ref="#Yoshihidé"> Yoshihidé </persName>
+                  impudent au-delà de toute expression, il restait un sentiment humain, le seul qui
+                  vibrât encore en lui. </p>
+
+
+               <p>Car <persName ref="#Yoshihidé"> Yoshihidé </persName> choyait à la folie sa fille
+                  unique, la petite demoiselle d’honneur. Ainsi que je vous l’ai dit, c’était une
+                  fille très sensible, toute dévouée à son père. Lui, de son côté, ne lui témoignait
+                  pas une moindre sollicitude. Quand il s’agissait des vêtements ou des coiffures
+                  des sa fille, on raconte que cet homme, rebelle à toute quête de la part des
+                  temples, faisait les plus grands sacrifices. Mais je me demande si ce n’est pas là
+                  un mensonge.</p>
+
+
+               <p>Cependant, s’il la chérissait, il s’en tenait là. L’idée, par exemple, de lui
+                  trouver un bon époux était bien éloignée de ses pensées. Pis encore ! S’il s’était
+                  trouvé quelqu’un qui se fût risqué à lui faire la cour, il n’eût pas hésité à le
+                  faire attaquer de nuit, soudoyant à cette fin les vauriens venus du quartier. Les
+                  choses en étaient là quand, sur la demande expresse du <persName ref="#Horikawa">
+                     Seigneur</persName>, la jeune fille entra à son service comme demoiselle
+                  d’honneur. Le père en fut très mécontent. Il garda visage renfrogné pendant
+                  quelque temps, devant le <persName ref="#Horikawa"> Seigneur</persName> même. La
+                  seule vue de son visage aurait donné naissance aux bruits selon lesquels le
+                     <persName ref="#Horikawa"> Seigneur</persName>, entiché de la beauté de la
+                  fille, se l’était attachée malgré l’opposition du père. </p>
+
+
+               <p>Si ces rumeurs étaient fausses, il n’en reste pas moins vrai que <persName
+                     ref="#Yoshihidé"> Yoshihidé</persName>, par tendresse envers son enfant, avait
+                  toujours souhaité qu’on la renvoyât chez lui. À une certaine époque, sur l’ordre
+                  du <persName ref="#Horikawa"> Seigneur</persName>, il peignit le Bouddha enfant.
+                  Il prit pour modèle un page favori du <persName ref="#Horikawa">
+                     Seigneur</persName>. Il s’en tira avec bonheur. Le <persName ref="#Horikawa">
+                     Seigneur</persName> lui en exprima sa grande satisfaction :</p>
+
+               <p><said direct="true" who="#Horikawa" toWhom="#Yoshihidé">- Je te donnerai, comme
+                     récompense, tout ce que tu voudras. Ne te gêne pas pour le dire !</said></p>
+
+
+               <p>Que pensez-vous qu’il sollicita alors, respectueusement prosterné ?</p>
+
+               <p>Il eut l’audace de déclarer : </p>
+
+               <p><said direct="true" who="#Yoshihidé" toWhom="#Horikawa">- Accordez-moi la grâce,
+                        <persName ref="#Horikawa">Seigneur</persName>, de me rendre ma
+                     fille !</said></p>
+
+               <p>On eût pu le tolérer chez un autre seigneur. Mais la jeune fille était au service
+                  du <persName ref="#Horikawa">Seigneur de Horikawa</persName>. Là, si grand l’amour
+                  paternel du peintre fût-il, il ne pouvait excuser son indiscrète supplique. À
+                  cette réponse, le <persName ref="#Horikawa"> Seigneur </persName> parut mécontent
+                  et resta un moment sans parler, dévisageant <persName ref="#Yoshihidé"
+                     >Yoshihidé</persName>. Enfin, il dit froidement :</p>
+               <p><said direct="true" who="#Horikawa" toWhom="#Yoshihidé">- Cela, je ne puis
+                     l’accorder.</said></p>
+
+
+               <p>Et, coupant court, il se retira. </p>
+
+               <p>Des incidents analogues se renouvelèrent quatre ou cinq fois, me semble-t-il. Le
+                  regard du <persName ref="#Horikawa"> Seigneur </persName> fixé sur <persName
+                     ref="#Yoshihidé"> Yoshihidé </persName> paraissait devenir chaque fois plus
+                  glacial, je m’en souviens aujourd’hui. De son côté, la jeune fille
+                  s’inquiétait-elle du sort de son père ? Quand, par exemple, elle se retirait dans
+                  sa chambre, on la voyait souvent sangloter en silence, mordillant la manche de sa
+                  robe de dessous. Ce qui ne pouvait qu’alimenter les bruits selon lesquels le
+                     <persName ref="#Horikawa"> Seigneur </persName> s’était épris de <persName
+                     ref="#FilleDeYoshihidé"> la fille de Yoshihidé</persName>. Certains même
+                  laissaient entendre que le <objectName ref="#FiguresInfernales"> Paravent des
+                     Figures infernales </objectName> tirait son origine de la résistance de la
+                  jeune fille aux assiduités du <persName ref="#Horikawa"> Seigneur</persName>. Mais
+                  là ne doit pas être la vérité.</p>
+
+               <p>Selon ce que nous pensons, le <persName ref="#Horikawa"> Seigneur </persName>
+                  avait cru bon de retenir auprès de lui la jeune fille, uniquement par pitié pour
+                  elle, parce qu’il avait l’idée généreuse de la laisser vivre à l’aise dans sa
+                  résidence au lieu de la renvoyer chez son excentrique de père. Il n’en est
+                  cependant pas moins vrai qu’il aimait cette jeune fille au naturel doux et tendre.
+                  On ne doit assurément pas lui en attribuer pour autant un certain désir frivole.
+                  Il serait mieux de trancher la question en disant qu’il s’agissait là de
+                  suppositions sans fondement. </p>
+
+
+               <p>Mais laissons cet épisode. Quoi qu’il en fût, la faveur du <persName
+                     ref="#Horikawa"> Seigneur </persName> envers <persName ref="#Yoshihidé">
+                     Yoshihidé </persName> avait, par cette affaire, sensiblement diminué, lorsque,
+                  on ne sait pour quel motif, le <persName ref="#Horikawa"> Seigneur </persName> le
+                  convoqua en hâte et lui passa commande du <objectName ref="#FiguresInfernales">
+                     Paravent</objectName>. </p>
+
+               <p>À ces mots de <objectName ref="#FiguresInfernales"> Paravent des Figures
+                     infernales</objectName>, il me semble que l’aspect terrifiant de cette peinture
+                  s’impose immédiatement. Des scènes de l’Enfer, il en est d’autres. Mais les toiles
+                  de <persName ref="#Yoshihidé"> Yoshihidé </persName> différaient par leur
+                  composition de celles de ses collègues. </p>
+            </div2>
+         </div1>
+
+
+         <div1 type="dictionnary">
+
+            <head>Lexique</head>
+            <div2>
+
+               <head>Personnages historiques</head>
+
+               <div3 n="1">
+                  <head>I</head>
+
+                  <entryFree
+                     source="https://fr.wikipedia.org/wiki/Qin_Shi_Huang#Premier_empereur_de_Chine">
+                     <form>Premier Empereur de Ts’in</form> Qin Shi Huang fut d'abord le roi de Qin
+                     de 247 à 221 av. J.-C. Il devint l'unificateur de l'Empire de Chine, et par
+                     conséquent l'empereur fondateur de la dynastie Qin (221 à 207 av. J.-C.) </entryFree>
+
+                  <entryFree
+                     source="https://fr.wikipedia.org/wiki/Yang_Tong#:~:text=Yang%20Tong%20(chinois%20traditionnel%20%3A%20%E6%A5%8A,un%20empereur%20de%20la%20dynastie">
+                     <form>Empereur Yang</form> Yang Tong (chinois traditionnel : 楊侗), (605- juillet
+                     619), désigné dans les chroniques chinoises par son titre princier de Prince de
+                     Yue (越王) ou comme étant le Seigneur Huangtai (皇泰主)8, ou encore par son nom
+                     posthume9 d'Empereur Gong (恭皇帝) ou bien son nom de courtoisie Renjin (仁謹), est
+                     un empereur de la dynastie Chinoise Sui. </entryFree>
+
+                  <entryFree source="https://fr.wikipedia.org/wiki/Minamoto_no_T%C5%8Dru">
+                     <form>Ministre de gauche Tooru</form> Minamoto no Tōru (源 融?, 822 - 895) est un
+                     poète et homme politique de l'époque de Heian. </entryFree>
+
+
+               </div3>
+               <div3 n="4">
+                  <head>IV</head>
+
+                  <entryFree
+                     source="https://www.persee.fr/doc/dhjap_0000-0000_1987_dic_13_1_917_t1_0110_0000_4">
+                     <form>Kawanari</form> Kudara no Kawanari (782-853) est un peintre japonais de
+                     l'époque de Heian. </entryFree>
+
+                  <entryFree
+                     source="https://www.persee.fr/doc/dhjap_0000-0000_1987_dic_13_1_917_t1_0102_0000_3">
+                     <form>Kanaoka</form> Kose no Kanaoka est un peintre japonais de l'époque de
+                     Heian. </entryFree>
+
+               </div3>
+            </div2>
+
+            <div2>
+
+               <head>Références culturelles et mythologiques</head>
+
+               <div3 n="1">
+                  <head>I</head>
+
+                  <entryFree
+                     source="https://www.getty.edu/cona/CONAIconographyRecord.aspx?iconid=901002331#:~:text=Also%20known%20as%20the%20%22Defeater,a%20bull%20he%20has%20subdued.">
+                     <form>Dai Itoku</form> Le Roi de Science magique Dai Itoku est un personnage de
+                     la mythologie bouddhiste, qui fait partie des cinq rois-gardiens. </entryFree>
+
+                  <entryFree
+                     source="https://fr.wikipedia.org/wiki/Les_Aveugles_et_l%27%C3%89l%C3%A9phant">
+                     Les Aveugles et l'Éléphant est une fable d’origine indienne. Elle raconte que
+                     six aveugles eurent à décrire un éléphant en le touchant en différentes parties
+                     de son corps, et en en déduisant donc des représentations différentes.
+                     Lorsqu'ils confrontèrent ensuite leurs idées, ils rentrèrent en désaccord,
+                     doutèrent même de la sincérité de leurs interlocuteurs et, dans certaines
+                     versions, en vinrent aux coups.La morale de la parabole est que chaque humain a
+                     tendance à revendiquer une vérité absolue fondée sur son expérience subjective
+                     limitée, car il ignore les expériences subjectives limitées des autres, qui
+                     peuvent être également véridiques. </entryFree>
+
+                  <entryFree source="https://fr.wikipedia.org/wiki/Minamoto_no_T%C5%8Dru">
+                     <form>Le palais de Kawara</form> La résidence de Minamoto no Tōru est située
+                     sur la sixième avenue de Kyōto, au bord de la rivière Kamo et appelée Palais de
+                     la grève (河原院 Kawara no In). Cette résidence a été par la suite réputée pour
+                     être hantée. </entryFree>
+
+                  <entryFree
+                     source="https://www.japan-experience.com/fr/preparer-voyage/savoir/voyager-au-japon/floraison-pruniers-ume-tokyo-kyushu-nara">
+                     <form>Banquet des fleurs de Prunier</form> Pendant de la période de Nara
+                     (710-784), le Hanami (coutume japonaise qui invite à admirer les fleurs)
+                     faisait principalement référence à la fleur de prunier, et non à la fleur de
+                     cerisier comme aujourd'hui. L’empereur du Japon organisait même chaque année
+                     une fête pour admirer le rose étincelant de ces fleurs. </entryFree>
+
+               </div3>
+               <div3 n="4">
+
+                  <head>IV</head>
+
+
+                  <entryFree source="https://fr.wikipedia.org/wiki/Kichij%C5%8Dten">
+                     <form>Kichijôten</form> Kichijôten est une divinité japonaise. Elle est
+                     considérée comme la déesse du bonheur, de la fertilité et de la beauté. </entryFree>
+
+                  <entryFree source="https://fr.wikipedia.org/wiki/Acala">
+                     <form>Fudô</form> Le Roi de Science magique Fudô est un personnage de la
+                     mythologie bouddhiste, qui fait partie des cinq rois-gardiens </entryFree>
+
+                  <entryFree>
+                     <form>Chira Eiju</form> "Chira Eiju est le nom d’un monstre ailé à long nez,
+                     venu autrefois de Chine." </entryFree>
+
+                  <entryFree source="https://fr.wikipedia.org/wiki/Bouddha">
+                     <form>Bouddha</form> Le bouddha le plus connu demeure le fondateur du
+                     bouddhisme, Siddhārtha Gautama. </entryFree>
+
+               </div3>
+            </div2>
+            <div2>
+
+               <head>Mots étrangers</head>
+
+               <div3 n="2">
+                  <head>II</head>
+
+                  <entryFree>
+                     <form>eboshi</form>
+                     <sense>Un type de chapeau. </sense>
+                  </entryFree>
+
+               </div3>
+
+               <div3>
+                  <head>Les oeuvres de Yoshihidé</head>
+
+                  <listObject>
+                     <object>
+                        <objectIdentifier>
+                           <objectName ref="#FiguresInfernales"> Paravent des Figures Infernales
+                           </objectName>
+                        </objectIdentifier>
+                     </object>
+
+                     <object>
+                        <objectIdentifier>
+                           <objectName> Cycle des Naissances et des Morts </objectName>
+                        </objectIdentifier>
+                     </object>
+                  </listObject>
+
+               </div3>
+            </div2>
+         </div1>
+      </body>
+   </text>
+</TEI>

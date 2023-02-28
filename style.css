@@ -1,0 +1,211 @@
+@charset "utf-8";
+
+/* La barre de navigation */
+header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    border-bottom: 4px solid#52796F;
+    background-color: #D5C7BC;
+}
+
+img {
+    height: 88px;
+    width: auto;
+}
+
+nav {
+    float: right;
+    width: 75%;
+    margin : 2%;
+}
+
+nav>i>a {
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #785964;
+    margin: 1%;
+}
+
+
+nav>i>a:hover {
+    color:#52796F;
+}
+
+/* Style par défaut */
+main {
+    width: 100%;
+    text-align: center;
+    font-size: large;
+    padding-top: 10%;
+}
+
+body {
+    background-color: #D5C7BC;
+}
+
+
+/* Pour modifier l'en-tête de titre du site, POUR LE MOMENT = STYLE PAR DÉFAUT = A RETIRER */
+.top {
+    background-color: #785964;
+    padding: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: solid #454545;
+    
+}
+
+
+/* Le style des titres */
+h1 {
+    color: #D5C7BC;
+    text-decoration: none;
+    font-family:sans-serif;
+    font-size: 400%;
+}
+
+h2 {
+    color: #D5C7BC;
+    text-decoration: none;
+    font-family:sans-serif;
+    
+}
+
+h3 {
+    background-color: #52796F;
+    margin-left: 45%;
+    margin-right: 45%;
+    border-radius: 5px;
+    color: #D5C7BC;
+    font-family:sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+h4 {
+    color: #454545;
+    text-decoration: none;
+    font-family:sans-serif;
+}
+
+h5>a {
+    color: #454545;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+h5>a:hover {
+    color: #52796F;
+}
+
+.author {
+    color: #D5C7BC;
+    text-decoration: none;
+    font-family:sans-serif;
+}
+
+
+.lexique {
+    color: #785964;
+    text-decoration: overline;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    padding-top: 25px;
+}
+
+.big {
+    background-color: #52796F;
+    margin-left: 40%;
+    margin-right: 40%;
+    border-radius: 5px;
+    color: #D5C7BC;
+    font-family:sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+/* Le style des paragraphes */
+p>b {
+    color:#52796F ;
+}
+
+.intro {
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #454545;
+    padding: 1%;
+}
+
+.texte {
+    border: 2px solid #785964;
+    border-radius: 5px;
+    width: 96%;
+    text-align: justify;
+    text-decoration: none;
+    font-family: sans-serif;
+    padding: 2%;
+    color: #454545;
+}
+
+.dico {
+    border: 2px solid #785964;
+    border-radius: 10px;
+    margin: 35px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.def {
+    font-family: sans-serif;
+    text-align: justify;
+    padding: 10px;
+    margin-left: 110px;
+    margin-right: 110px;
+    line-height: 150%;
+}
+
+p.def>a {
+    color: #D5C7BC;
+    font-family: sans-serif;
+    text-decoration: none;
+    border: 5px solid #785964;
+    border-radius: 50%;
+    background-color: #785964;
+    
+
+}
+
+p.def>a:hover {
+    border: 5px solid #52796F;
+    border-radius: 50%;
+    background-color: #52796F;
+}
+
+.note {
+    font-size: smaller;
+    color: #52796F;
+}
+
+.list {
+    border: 2px solid #785964;
+    border-radius: 10px;
+    margin: 35px;
+    margin-left: 350px;
+    margin-right: 350px;
+}
+
+
+/* Le footer */
+footer {
+    border-top: 4px solid #52796F;
+    margin-top: 5%;
+}
+
+footer>p {
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #454545;
+    font-size: smaller;
+}
+

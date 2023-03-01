@@ -245,7 +245,7 @@
                             <xsl:for-each select=".//div2[@n = '1']/p">
                                 <p>
                                     <xsl:value-of select="."/>
-                                    <xsl:apply-templates select="./TEI/text"/>
+                                    
                                 </p>
                             </xsl:for-each>
                         </div>
